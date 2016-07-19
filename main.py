@@ -8,7 +8,7 @@ import re
 import urllib
 reload(sys)
 sys.setdefaultencoding("utf-8")
-token_api = 'Your Token'
+token_api = '242750015:AAHGPGumTz1RhUJ0w2hVkXayrtH_ZtCVoTU'
 url = 'https://api.telegram.org/bot'+token_api+'/'
 class JsonSerializable:
     def to_json(self):
@@ -99,7 +99,7 @@ def answerInlineQuery(inline_query_id,results,cache_time):
 
 """
 handler message              _____'_____
-start & copy right negative /Taylor Team\ MIT
+start & copy right arian /AriNewz\ MIT
                            |______'______|
 """
 def run ():
@@ -120,18 +120,18 @@ def run ():
                             send_action(chat_id,'typing')
                             key = json.dumps(
                             {'inline_keyboard':[[
-                            {'text':'Developer 👓','url':'https://telegram.me/negative'},
-                            {'text':'Taylor Team 🔌','url':'https://telegram.me/taylor_team'}
+                            {'text':'Developer 👓','url':'https://telegram.me/MrInferno'},
+                            {'text':'Python Shop 🔌','url':'https://telegram.me/PythonShop'}
                             ],
                             [
-                            {'text':'Your Info 🕶','url':'https://telegram.me/Taylor_tmtmbot?start=info'}
+                            {'text':'Your Info 🕶','url':'https://telegram.meFirstPythonBot?start=info'}
                             ],
                             [
-                            {'text':'Taylor Team Inline','switch_inline_query':'taylor-team'}
+                            {'text':'| Inline Mode |','switch_inline_query':'MrPython'}
                             ]
                             ]
                             })
-                            send_msg(chat_id,'<b>Taylor Team Development</b>\ncommands : \n/time\n/about',reply_markup=key)
+                            send_msg(chat_id,'<b>Arian Developent</b>\ncommands : \n/time\n/about',reply_markup=key)
                         if(command == '/time'):
                             getUpdates(last_update+1)
                             send_action(chat_id,'typing')
@@ -146,15 +146,15 @@ def run ():
                             markup = json.dumps({
                             'inline_keyboard':[
                             [
-                            {'text':'👇 Taylor Team 👇','callback_data':'1'}
+                            {'text':'👇 Python Shop 👇','callback_data':'1'}
                             ],
                             [
-                            {'text':'Developer 🕶','url':'https://telegram.me/negative'},
-                            {'text':'Channel','url':'https://telegram.me/taylor_team'}
+                            {'text':'Developer 🕶','url':'https://telegram.meMrInfernoe'},
+                            {'text':'Channel','url':'https://telegram.me/PythonShop'}
                             ]
                             ]
                             })
-                            send_photo(chat_id,open('photo-2016-06-09-01-09-41.jpg'),caption='@Taylor_Team',reply_markup=markup)
+                            send_photo(chat_id,open('photo-2016-06-09-01-09-41.jpg'),caption='@PythonShop',reply_markup=markup)
                         if(command == '/info' or command == '/start info'):
                             getUpdates(last_update+1)
                             send_action(chat_id,'typing')
@@ -184,12 +184,12 @@ def run ():
                     message_idd = update['callback_query']['message']['message_id']
                     id_from = update['callback_query']['message']['chat']['id']
                     if(data == '1'):
-                        answerCallbackQuery(call_id,text='👇👇👇\nDeveloper: Negative\nTeam : Taylor Team\ncommands :\n/time\n/about\n/help',show_alert=True)
+                        answerCallbackQuery(call_id,text='👇👇👇\nDeveloper:Arian\nTeam :Python Shop\ncommands :\n/time\n/about\n/help',show_alert=True)
                 if 'inline_query' in update:
                     getUpdates(last_update+1)
                     inline_query_idd = update['inline_query']['id']
                     inline_query_query = update['inline_query']['query']
-                    if inline_query_query == 'taylor-team':
+                    if inline_query_query == 'MrPython':
                         jso = json.dumps([{'type':'photo','id':'1','photo_url':'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg','thumb_url':'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg','caption':'@Taylor_Team'}])
                         answerInlineQuery(inline_query_id=inline_query_idd,results=[jso],cache_time=1)
 
